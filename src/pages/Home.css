@@ -1,0 +1,39 @@
+
+
+
+
+.fliter-con{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+    padding: 30px;
+  }
+
+  @media (max-width: 1100px) {
+    .grid-box {
+      grid-template-columns: repeat(3, 1fr); 
+      padding: 5px;
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .grid-box {
+      grid-template-columns: repeat(2, 1fr); 
+      padding: 5px;
+    }
+  }
+  
+  
+  @media (max-width: 576px) {
+    .grid-box {
+      grid-template-columns: 1fr; 
+      padding: 3px;
+      margin-left: auto;
+    }
+  }
