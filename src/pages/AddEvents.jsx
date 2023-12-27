@@ -91,7 +91,7 @@ const AddEvents = () => {
     // Make a POST request to the API endpoint
     axios
       .post(
-        "http://localhost/events-api/add-event.php",
+        "https://alleventsmayur.000webhostapp.com/add-event.php",
         formattedFormData
       )
       .then((response) => {
