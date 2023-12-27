@@ -81,17 +81,17 @@ const AddEvents = () => {
     const formattedFormData = {
       ...formData,
       start_time: formData.start_time
-        ? format(formData.start_time, "yyyy-MM-dd")
+        ? format(formData.start_time, "dd/MM/yyyy") // Format start_time as "20/02/2023"
         : null,
       end_time: formData.end_time
-        ? format(formData.end_time, "yyyy-MM-dd")
+        ? format(formData.end_time, "dd/MM/yyyy") // Format end_time as "20/02/2023"
         : null,
     };
 
     // Make a POST request to the API endpoint
     axios
       .post(
-        "https://alleventsmayur.000webhostapp.com/add-event.php",
+        "http://localhost/events-api/add-event.php",
         formattedFormData
       )
       .then((response) => {
@@ -156,7 +156,7 @@ const AddEvents = () => {
             <DatePicker
               selected={formData.end_time}
               onChange={(date) => handleDateChange(date, "end_time")}
-              dateFormat="MM/dd/yyyy"
+              dateFormat="dd/MM/yyyy"
               className="date-picker"
               required
             />
