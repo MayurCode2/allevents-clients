@@ -9,7 +9,7 @@ export default function App() {
       
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/add-events" element={<AddEvents />} />
+        <Route path="/addevent" element={<AddEvents />} />
       </Routes>
     </div>
   )
